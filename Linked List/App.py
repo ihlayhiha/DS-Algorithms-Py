@@ -9,4 +9,3 @@ linkedList.insertStart(21)
 
 linkedList.traverseList()
 linkedList.remove(12)
-linkedList.traverseList()
