@@ -8,4 +8,4 @@ linkedList.insertEnd(3)
 linkedList.insertStart(21)
 
 linkedList.traverseList()
-linkedList.remove(12)
+linkedList.remove(3)
