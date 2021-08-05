@@ -13,4 +13,4 @@ def factorial(n):
         return n * factorial(n - 1)
 
 
-print(factorial(1.5))
+print(factorial(10))
