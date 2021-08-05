@@ -15,9 +15,9 @@ def factorial(n):
 
 def fibonacci(n):
     """Return the 'n' th fibonacci number"""
-    assert n > 0 and int(n) == n, "Input has to be a positive integer to find the 'n' th fibonacci number"
-    if n in [1, 2]:
-        return 1
+    assert n >= 0 and int(n) == n, "Input has to be a positive integer to find the 'n' th fibonacci number"
+    if n in [0, 1]:
+        return n
     else:
         return fibonacci(n - 1) + fibonacci (n - 2)
 
