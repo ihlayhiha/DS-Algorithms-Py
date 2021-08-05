@@ -9,4 +9,8 @@ def recursiveMethod(n):
         print(n)
 
 
+m = 3
+assert(m < 1), "Does this work" + " adding random stuff" + "Generting a random assertion error"
+
+
 recursiveMethod(4)
