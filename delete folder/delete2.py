@@ -1,6 +1,5 @@
 # trying to check if this will work too
 
-
 def recursiveMethod(n):
     if n < 1:
         print("n is less than 1")
@@ -10,7 +9,16 @@ def recursiveMethod(n):
 
 
 m = 3
-assert(m < 1), "Does this work" + " adding random stuff" + "Generting a random assertion error"
+# assert(m < 1), "Does this work" + " adding random stuff" + "Generting a random assertion error"
 
 
+def factorial(n):
+    """calculating the 'n' th factorial using recursion"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+print(factorial(5))
 recursiveMethod(4)
