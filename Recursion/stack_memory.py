@@ -13,4 +13,14 @@ def factorial(n):
         return n * factorial(n - 1)
 
 
+def fibonacci(n):
+    """Return the 'n' th fibonacci number"""
+    assert n > 0 and int(n) == n, "Input has to be a positive integer to find the 'n' th fibonacci number"
+    if n in [1, 2]:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci (n - 2)
+
+
 print(factorial(10))
+print(fibonacci(20))
