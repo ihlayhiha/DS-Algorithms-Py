@@ -6,7 +6,8 @@ sys.setrecursionlimit(10000)    # basically has a recursive depth of 10000, i.e 
 
 def factorial(n):
     """calculating the 'n' th factorial using recursion"""
-    if n == 0:
+    assert(n >= 0), "n should be > 0, Factorial only exits for non-negative integers"
+    if n in [0, 1]:
         return 1
     else:
         return n * factorial(n - 1)
