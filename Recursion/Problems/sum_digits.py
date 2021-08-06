@@ -3,8 +3,8 @@ def sum_digits(n):
     assert n > 0 and int(n) == n, "'n' has to be a positive integer"
     if n // 10 == 0:
         return n % 10
-    else:
-        return (n % 10) + sum_digits(n // 10)
+        
+    return (n % 10) + sum_digits(n // 10)
 
 
 def power(base, exp):
@@ -14,9 +14,9 @@ def power(base, exp):
         return power(1/base, -exp)
     if exp == 0:
         return 1
-    else:
-        return base * power(base, exp - 1)
+
+    return base * power(base, exp - 1)
     
 
 print(sum_digits(4789359))
-print(power(1/10, -3))
+print(power(10, 2))
