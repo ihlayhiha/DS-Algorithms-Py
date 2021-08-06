@@ -7,4 +7,16 @@ def sum_digits(n):
         return (n % 10) + sum_digits(n // 10)
 
 
+def power(x, n):
+    """Return the nth power of x"""
+    assert int(n) == n, "Calculating only the integer powers of numbers"
+    if n < 0:
+        return power(1/x, -n)
+    if n == 0:
+        return 1
+    else:
+        return x * power(x, n - 1)
+    
+
 print(sum_digits(4789359))
+print(power(1/10, -3))
