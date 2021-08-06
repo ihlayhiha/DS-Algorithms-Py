@@ -7,4 +7,4 @@ def sum_digits(n):
         return (n % 10) + sum_digits(n // 10)
 
 
-print(sum_digits(435))
+print(sum_digits(4789359))
