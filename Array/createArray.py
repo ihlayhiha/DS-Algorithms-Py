@@ -8,10 +8,10 @@ print(arr1, arr2)
 
 
 # inserting 10 as the 7 th element into arr1
-print(f"the ID of arr1: {id(arr1)}")
+print(f"the ID of arr1: {id(arr1)}", end='\n\n')
 arr1.insert(6, 10)
 print(arr1)
-print(f"the ID of arr1: {id(arr1)}")
+print(f"the ID of arr1: {id(arr1)}", end='\n\n')
 # inserting 11 as the first element into arr1
 # the array moves to the right automatically
 arr1.insert(0, 11)
@@ -27,12 +27,22 @@ arr1.insert(9, 99)
 # print(len(arr1))
 # just changing the value of an element in this array
 arr1[0] = 100
-print(f"the ID of arr1: {id(arr1)}")
+print(f"the ID of arr1: {id(arr1)}", end='\n\n')
 
 arr1.insert(100, 15)    # if index u want to insert > len(arrray), it inserts the element at the end of array (array elements HAVE to be continuous)
 print(arr1)
-print(f"the ID of arr1: {id(arr1)}")
+print(f"the ID of arr1: {id(arr1)}", end='\n\n')
 
+# Trying out Remove element method. Needs only one argument (the value u want to remove)
+print("Removing element with value = 1")
+arr1.remove(1)
+print(arr1)
+print(f"the ID of arr1: {id(arr1)}", end='\n\n')
+
+print("Removing the 4th element which has value = {} ".format(arr1[3]))
+arr1.remove(arr1[3])
+print(arr1)
+print(f"the ID of arr1: {id(arr1)}", end='\n\n')
 
 print("*" * 50)
 # trying out Traversing
@@ -50,5 +60,7 @@ def searchInArray(array, value):
 
     print("No such value exists in this array")
 
-traverseArray(arr1)
+
+
+# traverseArray(arr1)
 searchInArray(arr1, 222)
