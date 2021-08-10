@@ -29,7 +29,7 @@ arr1.insert(9, 99)
 arr1[0] = 100
 print(f"the ID of arr1: {id(arr1)}")
 
-arr1.insert(100, 15)    # if index u want to insert > len(arrray), it inserts the element at the end of array
+arr1.insert(100, 15)    # if index u want to insert > len(arrray), it inserts the element at the end of array (array elements HAVE to be continuous)
 print(arr1)
 print(f"the ID of arr1: {id(arr1)}")
 
