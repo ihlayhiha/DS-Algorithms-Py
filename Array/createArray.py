@@ -20,6 +20,16 @@ arr1.insert(2, 12)
 print(arr1)
 
 # Time Complexity for inserting is dependent on where u wanna insert and the worst case is O(n)
-print(len(arr1))
+# print(len(arr1))
 arr1.insert(9, 99)
-print(len(arr1))
+# print(len(arr1))
+
+print("*" * 50)
+# trying out Traversing
+
+def traverseArray(array):
+    for n in range(len(array)):
+        print(f"The {n} element in this array is {array[n]}")
+
+
+traverseArray(arr1)
