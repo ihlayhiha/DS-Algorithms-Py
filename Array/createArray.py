@@ -8,8 +8,10 @@ print(arr1, arr2)
 
 
 # inserting 10 as the 7 th element into arr1
+print(f"the ID of arr1: {id(arr1)}")
 arr1.insert(6, 10)
 print(arr1)
+print(f"the ID of arr1: {id(arr1)}")
 # inserting 11 as the first element into arr1
 # the array moves to the right automatically
 arr1.insert(0, 11)
@@ -23,6 +25,14 @@ print(arr1)
 # print(len(arr1))
 arr1.insert(9, 99)
 # print(len(arr1))
+# just changing the value of an element in this array
+arr1[0] = 100
+print(f"the ID of arr1: {id(arr1)}")
+
+arr1.insert(100, 15)    # if index u want to insert > len(arrray), it inserts the element at the end of array
+print(arr1)
+print(f"the ID of arr1: {id(arr1)}")
+
 
 print("*" * 50)
 # trying out Traversing
