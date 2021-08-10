@@ -32,4 +32,13 @@ def traverseArray(array):
         print(f"The {n} element in this array is {array[n]}")
 
 
+def searchInArray(array, value):
+    for i in array:
+        if i == value:
+            print(array.index(i))
+            return
+
+    print("No such value exists in this array")
+
 traverseArray(arr1)
+searchInArray(arr1, 222)
