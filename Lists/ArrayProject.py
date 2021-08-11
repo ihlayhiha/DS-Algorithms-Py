@@ -3,7 +3,7 @@ import numpy as np
 
 def checkInt(check):
     try: int(check)
-    except ValueError or int(check) != float(check):
+    except ValueError:
         return False
     else:
         return True
@@ -37,7 +37,7 @@ def tempStats():
     print("Average: ", average)
     count = 0
     for temp in tempRecordings:
-        if temp >= average:
+        if temp > average:
             count += 1
     print("{} days(s) above average".format(count))
 
