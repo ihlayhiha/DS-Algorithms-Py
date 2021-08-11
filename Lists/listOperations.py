@@ -3,14 +3,15 @@
 # + operator / concatenate
 
 a = [1, 2, 3, 4, 5, 6, 7]
+randList = a
 empty = [8, 9, 10]
 c = a + empty
 print(c)
 
 # * operator
-rand = [0, 1, 2]
-rand = rand * 4
-print(rand)
+sample = [0, 1, 2]
+sample = sample * 4
+print(sample)
 
 # len() function
 print(len(a))
@@ -68,3 +69,30 @@ print(sepS)
 print('s'.join(sepS))
 print(" ".join(b2))
 print("a".join(d2))
+
+
+# checking ID's
+print(randList)
+print(id(randList))
+
+randList.append(10)     # modifies the old list and still has the same ID
+print(randList)
+print(id(randList))
+
+randList = randList + [11]  # breaks down and allocates new space by creating a new list
+print(randList)
+print(id(randList))
+
+randList.sort()
+print(randList)
+print(id(randList))
+
+randList = [9, 8, 7, 6, 6, 5, 4, 3]
+print(randList)
+print(id(randList))
+checkList1 = randList       # just assigning it to randList
+checkList2 = randList[:]    # assigning values from randList
+randList.sort()           
+print()
+print(checkList1)   # changes as we when it's called, it's value will be called as randList
+print(checkList2)   # already has a value assigned. Doesn't change when randList is sorted
