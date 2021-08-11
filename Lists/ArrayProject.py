@@ -33,7 +33,8 @@ def tempStats():
             highTemp = input(f"Day {i}'s high temperature: ")
 
         tempRecordings = np.append(tempRecordings, float(highTemp))
-    average = sum(tempRecordings/len(tempRecordings))
+
+    average = round(sum(tempRecordings/days))
     print("Average: ", average)
     count = 0
     for temp in tempRecordings:
