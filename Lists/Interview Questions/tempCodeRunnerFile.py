@@ -1,7 +1,1 @@
-
-    # for value in nums:
-    #     if value in empty:
-    #         print('This list is not unique')
-    #         return
-    #     empty.append(value)
-    # print("Yes this list is Unique")
+[1, 2, 3], [4, 5, 6], [7, 8, 9]
