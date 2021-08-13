@@ -117,3 +117,22 @@ print(len(init_tuple[3:8]))
 # B. 5
 # C. 4
 # D. None
+
+print("*" * 55)
+print()
+
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7,  8],
+    [9, 10, 11, 12]
+]
+
+whatTheFuck = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+print(whatTheFuck)
+
+rotateFuck = [[row[i] for row in matrix] for i in range(len(matrix), -1, -1)]
+
+anotherRotate = [[row[i] for row in matrix[::-1]] for i in range(len(matrix[0]))]
+
+print(rotateFuck)
+print(anotherRotate)
