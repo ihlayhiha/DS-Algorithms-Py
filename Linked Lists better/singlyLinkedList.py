@@ -51,7 +51,7 @@ while garbage:
     garbage = garbage.next
 
 
-# Adding a node at the middle of SinglyLinkedList
+# Adding a node at the middle of SinglyLinkedList at position : 2
 print()
 
 position = 2
