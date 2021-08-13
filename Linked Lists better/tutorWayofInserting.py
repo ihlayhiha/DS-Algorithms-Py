@@ -126,6 +126,9 @@ class SLinkedList():
                 prevNode.next = mainNode.next
             
 
+    def deleteLinkedList(self):
+        """Deletes the entire SinglylinkedList"""
+        self.head = self.tail = None
 
 
 
@@ -169,3 +172,10 @@ singlyLinkedList.traverse()
 print()
 singlyLinkedList.deleteNode_loc(3)
 singlyLinkedList.traverse()
+
+
+singlyLinkedList.deleteLinkedList()
+singlyLinkedList.traverse()
+
+anotherLinkedList.deleteLinkedList()
+anotherLinkedList.traverse()
