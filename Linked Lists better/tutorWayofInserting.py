@@ -103,9 +103,9 @@ class SLinkedList():
     def deleteNode_loc(self, location):
         """ Removes the node at the given location
         
-        location = -1, removes the tail node
-        location >= number of nodes, removes the tail node
-        location = 0, removes the head node
+        location = -1, removes the last node
+        location >= number of nodes, removes the last node
+        location = 0, removes the first node
         
         """
         if location == 0:
