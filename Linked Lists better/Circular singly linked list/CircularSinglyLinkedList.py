@@ -93,8 +93,8 @@ class CircularSinglyLinkedList:
         else:
             if self.head.next == self.head:
                 self.head = None
-                self.tail = None
                 self.tail.next = self.head
+                self.tail = None
             else:
                 tempNode = self.head.next
                 self.head = tempNode
@@ -147,7 +147,10 @@ class CircularSinglyLinkedList:
                     return
                 node.next = node.next.next
             
-                
+    def deleteEntireList(self):
+        self.head = None
+        self.tail.next = self.head
+        self.tail = None
 
 
 # TEST
@@ -187,10 +190,16 @@ print("- "* 100)
 print()
 
 
-circularsll.deleteLast()
 circularsll.traverse()
+print("Deleting last Element")
+circularsll.deleteLast()
+print("Adding 5 as the 5th element")
 circularsll.insert(5, 5)
+print("Deleting last element again")
 circularsll.deleteNode(9)
-[circularsll.deleteNode(i) for i in range(8, 0, -1)]
+# [circularsll.deleteNode(i) for i in range(8, 0, -1)]
 # [circularsll.deleteNode(i) for i in range(0, 100, 2)]
 circularsll.traverse() 
+
+# circularsll.deleteEntireList()
+# circularsll.traverse()
