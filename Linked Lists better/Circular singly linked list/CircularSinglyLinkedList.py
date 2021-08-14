@@ -127,8 +127,7 @@ class CircularSinglyLinkedList:
                 while tempNode.value != nodeValue:
                     prevNode = prevNode.next
                     tempNode = tempNode.next
-                prevNode.next = tempNode.next
-         
+                prevNode.next = tempNode.next   
 
     def deleteNode(self, location):
         if not self.head:
@@ -148,10 +147,12 @@ class CircularSinglyLinkedList:
                 node.next = node.next.next
             
     def deleteEntireList(self):
-        self.head = None
-        self.tail.next = self.head
-        self.tail = None
-
+        if self.head:
+            self.head = None
+            self.tail.next = self.head
+            self.tail = None
+        else:
+            print("The list is already empty")
 
 # TEST
 circularsll = CircularSinglyLinkedList()
