@@ -216,5 +216,11 @@ oneElementdll.deleteNode(0)
 oneElementdll.traverse()
 
 print("\n" + "Deleting entire list")
-doublyll.deleteEntireDLL()
-doublyll.traverse()
+# doublyll.deleteEntireDLL()
+# doublyll.traverse()
+
+print(doublyll.checkNode(2))
+for node in doublyll:
+    if node.value == 2:
+        print("next value is {}".format(node.next.value))
+        print("prev value is {}".format(node.prev.value))
