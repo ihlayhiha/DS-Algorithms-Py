@@ -1,0 +1,1 @@
+circularsll.checkNode(i) for i in range(6)
