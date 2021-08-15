@@ -8,7 +8,7 @@ class Node:
         self.value = value
 
 
-class DoublyCircularLinkedList:
+class CircularDoublyLinkedList:
     
     def __init__(self) -> None:
         self.head = None
@@ -217,48 +217,48 @@ class DoublyCircularLinkedList:
 
 
 # Try
-doublycll = DoublyCircularLinkedList()
-print([node.value for node in doublycll])
+circulardll = CircularDoublyLinkedList()
+print([node.value for node in circulardll])
 
-doublycll.createDCLL(1000)
-doublycll.traverse()
-print("The head value is {}".format(doublycll.head.value))
+circulardll.createDCLL(1000)
+circulardll.traverse()
+print("The head value is {}".format(circulardll.head.value))
 
 
-[doublycll.insert(i, 0) for i in range(10, -1, -1)]
-doublycll.traverse()
+[circulardll.insert(i, 0) for i in range(10, -1, -1)]
+circulardll.traverse()
 
-doublycll.insert("'at end'", 12)
-doublycll.traverse()
-print(doublycll.tail.value)
+circulardll.insert("'at end'", 12)
+circulardll.traverse()
+print(circulardll.tail.value)
 
 # for node in doublycll:
 #     print("The next node of {} is {}".format(node.value, node.next.value))
 #     print("The prev node of {} is {}".format(node.value, node.prev.value))
 
-emptydcll = DoublyCircularLinkedList()
-emptydcll.insert(10, 0)
-emptydcll.insert(100, 0)
-emptydcll.insert(100, 0)
-print("The node we found is",  emptydcll.findNode(2))
-emptydcll.traverse()
+emptycdll = CircularDoublyLinkedList()
+emptycdll.insert(10, 0)
+emptycdll.insert(100, 0)
+emptycdll.insert(100, 0)
+print("The node we found is",  emptycdll.findNode(2))
+emptycdll.traverse()
 print("-"* 40 + "\n")
 
-print(doublycll.findNode(12))
-print(doublycll.checkNode("'at end'"))
+print(circulardll.findNode(12))
+print(circulardll.checkNode("'at end'"))
 
-doublycll.traverse()
-doublycll.deleteTail()
-print(doublycll.head.prev.value)
+circulardll.traverse()
+circulardll.deleteTail()
+print(circulardll.head.prev.value)
 
-doublycll.traverse()
-doublycll.removeNode(1000)
-doublycll.traverse()
+circulardll.traverse()
+circulardll.removeNode(1000)
+circulardll.traverse()
 
 print("-"* 40 + "\n")
-doublycll.traverse()
-doublycll.deleteNode(11)
-doublycll.traverse()
+circulardll.traverse()
+circulardll.deleteNode(11)
+circulardll.traverse()
 
 # doublycll.deleteEntireList()
 # doublycll.traverse()
