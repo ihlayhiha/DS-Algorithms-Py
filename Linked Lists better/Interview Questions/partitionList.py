@@ -6,8 +6,6 @@ def partitionValue(ll, x):
     if not ll.head:
         return
 
-    tempList = []
-
     checkNode = ll.head
     while checkNode.next:
         if checkNode.next.value < x:
