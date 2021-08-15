@@ -2,7 +2,7 @@ from LinkedList import Node, LinkedList
 
 def removeDuplicates(unsortedList):
 
-    # Creating a new linked list
+    # Creating a new linked list --------------->O(n)
     # checkList = []
     # for node in unsortedList:
     #     if node.value not in checkList:
@@ -13,7 +13,7 @@ def removeDuplicates(unsortedList):
     # return sortedList
 
 
-    # Using the .removeNode() method
+    # Using the .removeNode() method------------>O(n**2)
     # checkList = []
     # for node in unsortedList:
     #     if node.value not in checkList:
@@ -22,32 +22,41 @@ def removeDuplicates(unsortedList):
     #         unsortedList.removeNode(node.value)
     # return unsortedList
 
-    # Using a for loop .remove() method
-
-
-    # using a While loop
+    # Using While loop-------------------------->O(n)
     # if not unsortedList.head:
-    #     return
-    # currentNode = unsortedList.head
-    # checkSet = {currentNode.value}
-    # while currentNode.next:
-    #     if currentNode.next.value in checkSet:
-    #         currentNode.next = currentNode.next.next
+    #     return 
+    # prevNode = unsortedList.head
+    # checkSet = {prevNode.value}
+    # while prevNode.next:
+    #     if prevNode.next.value in checkSet:
+    #         prevNode.next = prevNode.next.next
     #     else:
-    #         checkSet.add(currentNode.next.value)
-    #         currentNode =  currentNode.next
+    #         checkSet.add(prevNode.next.value)
+    #         prevNode = prevNode.next
     # return unsortedList
-
-    
-    # Without creating a new buffer list or set
-
     
 
+    # Without creating a new set--------------->O(n**2)
+    if not unsortedList.head:
+        return
+    node = unsortedList.head
+    while node:
+        prevNode = node
+        while prevNode.next:
+            if prevNode.next.value == node.value:
+                prevNode.next = prevNode.next.next
+            else:
+                prevNode = prevNode.next
+        node = node.next
+    return unsortedList
 
-unsorted = LinkedList()
+    
+
+
+testingLinkedList = LinkedList()
 for a in range(10):
-    unsorted.add(a)
+    testingLinkedList.add(a)
 addingList = [1, 1, 2, 3 ,5]
-[unsorted.add(i) for i in addingList]    
-print(unsorted)
-print(removeDuplicates(unsorted))
+[testingLinkedList.add(i) for i in addingList]    
+print(testingLinkedList)
+print(removeDuplicates(testingLinkedList))
