@@ -8,7 +8,6 @@ class LinkedList(object):
 
     # O(N)
     def traverseList(self):
-    	# traversing through the LinkedList
         actualNode = self.head
 
         while actualNode is not None:
