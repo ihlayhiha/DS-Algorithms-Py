@@ -1,5 +1,3 @@
 
-# addTestLL1.add(1)
-# addTestLL2.add(1)
-# addTestLL2.add(1)
-# addTestLL2.add(1)
+    # if ll1.tail != ll2.tail:
+    #     return False
